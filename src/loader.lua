@@ -60,7 +60,6 @@ local function fetchFile(path, branch)
 			end
 		else
 			currentPath ..= ("/" .. pathStr)
-			print(currentPath)
 			if not isfolder(currentPath) then makefolder(currentPath) end
 		end
 	end
