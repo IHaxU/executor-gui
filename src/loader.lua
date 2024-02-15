@@ -39,6 +39,8 @@ local function fetchFile(path, branch)
 	table.insert(sepPath, 1, branch)
 	local currentPath = repoName
 
+	if not isfolder(currentPath) then makefolder(currentPath) end
+
 	for pathIndex, pathStr in sepPath do
 		if pathIndex == #sepPath then
 			currentPath ..= ("/" .. pathStr)
